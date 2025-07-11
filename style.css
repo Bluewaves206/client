@@ -1,0 +1,946 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.signUpCredential {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.signUpCredential select {
+    width: 100%;
+    padding: 22px 16px;
+    background: rgba(70, 144, 205, 10%);
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+    border: none;
+    border-radius: 7px;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Safari, Chrome, Opera */
+    -webkit-appearance: none;
+}
+
+.signUpCredential select:focus-visible {
+    outline: none !important;
+}
+
+.signUpCredential:last-child {
+    margin-bottom: 0;
+}
+
+.signUpCredential label {
+    position: absolute;
+    left: 12px;
+    top: 19px;
+    font-size: 14px;
+    pointer-events: none;
+    color: #777;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.signUpCredential input:focus {
+    /* border-color: #007bff; */
+    outline: none;
+    background: rgba(70, 144, 205, 10%);
+    border: 1px solid #587DBD;
+
+}
+
+.signUpCredential input:focus+label,
+.signUpCredential input:not(:placeholder-shown)+label {
+    top: -6px;
+    font-size: 12px;
+    color: #007bff;
+    background-color: #ffffff;
+    padding: 0 4px;
+    border-radius: 4px;
+    left: 8px;
+}
+
+.mainSignup {
+    padding: 0 180px;
+    height: 100vh;
+    position: relative;
+}
+
+.signupShape01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.signupShape02 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.signupShape03 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.signUp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.brandLogo {
+    width: 450px;
+}
+
+.mainBrandLogo {
+    position: relative;
+}
+
+.brandLogoWaterMark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+}
+
+#myTab {
+    display: none;
+}
+
+.rightSignup {
+    max-width: 420px;
+    overflow-x: hidden;
+}
+
+.signUpHeading {
+    margin-bottom: 35px;
+}
+
+.signUpHeading h3 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.signUpHeading span {
+    font-size: 12px;
+    font-weight: 300;
+    color: #535353;
+}
+
+.signUpCredential input {
+    height: 60px;
+    width: 100%;
+    border-radius: 7px;
+    /* border: 1px solid #587DBD; */
+    border: none;
+    background: rgba(70, 144, 205, 10%);
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #587DBD;
+}
+
+.checkboxSpan {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 42%);
+}
+
+.checkboxSpan a {
+    text-decoration: none;
+}
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098A9;
+    transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-46 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #319F43;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.checkbox-wrapper-46 .cbx span:last-child {
+    padding-left: 8px;
+}
+
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: #319F43;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child {
+    background: #319F43;
+    border-color: #319F43;
+    animation: wave-46 0.4s ease;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.alreadyAccount {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.alreadyAccount span {
+    font-size: 16px;
+    color: #7E7E7E;
+    font-weight: 400;
+}
+
+.alreadyAccount span a {
+    font-size: 20px;
+    color: #1E7BC0;
+    font-weight: 700;
+}
+
+.signUpButtons {
+    text-align: center;
+}
+
+.sendOtpBtn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffff;
+    padding: 12px 28px;
+    background: #1E7BC0;
+    border-radius: 5px;
+    border: 1px solid #1E7BC0;
+
+}
+
+.backBtn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1E7BC0;
+    padding: 12px 30px;
+    border: 1px solid #1E7BC0;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.cancelBtn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1E7BC0;
+    padding: 12px 30px;
+    border: 1px solid #1E7BC0;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.signUpButtons .verifyBtn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffff;
+    padding: 12px 87px;
+    background: #1E7BC0;
+    border-radius: 5px;
+    border: 1px solid #1E7BC0;
+}
+
+#otp-form {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+#otp-form input {
+    border: none;
+    background: #FFFFFF;
+    border: 2px solid #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+    color: rgba(0, 0, 0, 75%);
+    font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 75px;
+    height: 70px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#otp-form input:focus-visible {
+    outline: 2px solid royalblue;
+}
+
+#otp-form input.filled {
+    outline: 2px solid rgb(7, 192, 99);
+}
+
+.enterOtpText {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 65%);
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+/* Topbar */
+.topbar {
+    margin-left: 200px;
+    background: #005DFF;
+    transition: 0.5s ease-in-out all;
+}
+
+.sidebarBrandLogo {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.sidebarBrandLogo img {
+    width: 100%;
+    height: 100%;
+}
+
+.insideTopbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#navHamburger {
+    border: none;
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+#navHamburger i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.sidebarOption {
+    padding-top: 30px;
+}
+
+/* Topbar */
+/* Dashbaord */
+.mainSidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    min-height: 100vh;
+    height: 100%;
+    background: #fff;
+    border-right: 1px solid #A8A8A8;
+    padding: 20px 10px;
+    transition: 0.5s ease-in-out all;
+}
+
+.navOptions {
+    background: #504973;
+    color: #fff;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.logOut {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 10px;
+    width: 100%;
+    background: #5433ff;
+}
+
+.logoutUser {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.navOptions i,
+.logoutUser i {
+    margin-right: 5px;
+}
+
+.mainContent {
+    margin-left: 215px;
+    padding: 25px;
+    height: 100%;
+    transition: 0.5s ease-in-out all;
+}
+
+.contentHeading {
+    margin-bottom: 30px;
+}
+
+.contentHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.innerContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.innerContent input {
+    height: 38px;
+}
+
+.innerContent .projectDate {
+    font-size: 12px;
+}
+
+.contentHeading h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    /* margin-bottom: 30px; */
+}
+
+.mainProjectList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projectList {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
+.tlImage {
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.tlImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectName h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    max-width: 400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.projectDesc span {
+    color: #6C6C6C;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    display: inline-block;
+    border-bottom: 1px solid #B4B4B4;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limits text to 3 lines */
+    -webkit-box-orient: vertical;
+    /* line-height: 1.5; */
+}
+
+.semiButtomProject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #B4B4B4;
+}
+
+.leftProjectTl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttomProject {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.tlDetails h6 {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 130px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.tlDetails p {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6C6C6C;
+}
+
+.assignHour p,
+.assignMember p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.rightProjectTl .progress {
+    min-width: 110px;
+    height: 10px;
+}
+
+.projectCmpltPercentage h6 {
+    text-align: end;
+    font-weight: 600;
+}
+
+.projectCmpltPercentage .progress {
+    border: 0.2px solid #9E9E9E;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.projectCmpltPercentage .progress-bar {
+    background: linear-gradient(270deg, #FFFFFF .46%, #2EB90B 27.19%);
+}
+
+.assignHour p span,
+.assignMember p span {
+    font-weight: 800;
+}
+
+.teamLeadImg {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.teamLeadImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectModalUpper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.projectName h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #E53BFF;
+    margin-bottom: 0;
+}
+
+.projectStatus button {
+    background: transparent;
+    border: 2px solid #00A352;
+    padding: 5px 15px;
+    color: #20744A;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.projectUnderAllDetails {
+    padding: 35px 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+}
+
+.projectClientName h6 {
+    margin-bottom: 0;
+}
+
+.projectContactTeamLead {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectTeamLead {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.projectTeamLead h6 {
+    margin-bottom: 0;
+}
+
+.projectClientName {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0000001f;
+}
+
+.projectClientName h6 span,
+.projectContact h6 span,
+.projectTeamLead h6 {
+    font-weight: 500;
+    color: #000;
+}
+
+.projectClientName h6,
+.projectContact h6,
+.teamLeadName span {
+    color: #E53BFF;
+    font-weight: 700;
+}
+
+.projectContact h6 {
+    margin-bottom: 0;
+}
+
+.projectProgress {
+    padding: 30px 0;
+}
+
+.cmnProjectHeading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #005DFF;
+}
+
+.projectProgressBar .progress-bar {
+    background: #2EB90B;
+}
+
+.projectProgressBar .progress {
+    max-width: 350px;
+}
+
+.progressPercentage {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.projectDescriptionHeading span {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.projectDescriptionContent {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.projectDescriptionContent p {
+    font-size: 15px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.projectTicketHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.projectProgressHeading {
+    margin-bottom: 5px;
+}
+
+.projectTicketHeading button {
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 5px 20px;
+}
+
+.projectStausComplete {
+    border: 2px solid #00A352;
+    font-size: 12px;
+    font-weight: 500;
+    color: #20744A;
+}
+
+.projectStausPending {
+    border: 2px solid #E53BFF;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B558BD;
+}
+
+.cmnStatusBtn {
+    width: 95px;
+    padding: 5px 2px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.viewProjectBtn {
+    font-size: 20px;
+    color: #149441;
+}
+
+.deleteProjectBtn {
+    font-size: 20px;
+    color: #ED2939;
+    margin-left: 5px;
+
+}
+
+/* Dashbaord */
+@keyframes wave-46 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 1440px) {}
+
+@media(max-width: 1199px) {
+    .signUp {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .brandLogo {
+        width: 170px;
+    }
+
+    .brandLogoWaterMark {
+        user-select: none;
+        pointer-events: none;
+    }
+
+    .projectName h2 {
+        font-size: 20px;
+    }
+
+    .contentHeading h4 {
+        font-size: 16px;
+    }
+
+    .projectName h5 {
+        font-size: 14px;
+    }
+
+    .projectDesc span {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    h6,
+    .teamLeadName span {
+        font-size: 12px;
+    }
+
+    .projectStatus button {
+        font-size: 14px;
+    }
+
+    .cmnProjectHeading {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 992px) {
+    semiButtomProject {
+        flex-wrap: wrap;
+    }
+
+    .projectDescriptionContent p {
+        font-size: 14px;
+    }
+
+    .projectTicketHeading button {
+        font-size: 14px;
+    }
+
+    #projectTicketTable tbody tr td {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .projectChartHeading h3 {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 767px) {
+    .mainProjectList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tlImage {
+        width: 35px;
+        height: 35px;
+    }
+
+    .innerContent {
+        flex-direction: column;
+    }
+
+    .projectName h2 {
+        font-size: 18px;
+    }
+
+    #projectTicketTable tbody tr td {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .cmnProjectHeading,
+    .progressPercentage {
+        font-size: 14px;
+    }
+
+    .projectChartHeading h3 {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 575px) {
+    .mainProjectList {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projectName h2 {
+        font-size: 18px;
+    }
+}
